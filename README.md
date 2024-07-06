@@ -20,20 +20,29 @@ LatsDigitFactorial é um código que calcula e exibe o último dígito do fatori
 
 **Análise do Fluxograma:**
 
-1. **Início:** O programa começa.
-2. **Obter números do usuário:** O usuário insere os números.
-3. **10 números ou menos?:** Verifica a quantidade.
-- **Sim:** Prossegue para verificar se são números válidos.
-- **Não:** Exibe erro de limite excedido e termina.
-4. **Todos são números?:** verifica se todas as entradas são números.
-- **Sim:** Prossegue para verificar se são positivos.
-- **Não:** Exibe erro de formato inválido e termina.
-5. **Todos são positivos?:** verifica se todos os números são positivos.
-- **Sim:** Calcula o fatorial e o último dígito de cada número.
-- **Não:** Exibe erro de número negativo e termina.
-6. **Calcular fatorial e último dígito:** Realiza os cálculos para cada número válido.
-7. **Exibir últimos dígitos:** Mostra os resultados na tela.
-8. **Fim:** O programa termina.
+1. **Classe Main:**
+**Start:** Início do programa.
+**Criar Scanner:** Cria um objeto Scanner para ler a entrada do usuário.
+**Ler números (até 10):** Lê os números fornecidos pelo usuário, com um limite de 10.
+**<= 10 números?:** Verifica se a quantidade de números é menor ou igual a 10.
+- **Sim:** Cria objetos Fatorial para cada número e calcula o último dígito do fatorial.
+- **Não:** Exibe uma mensagem de erro indicando que o usuário excedeu o limite de números e encerra o programa.
+**Criar Fatorial para cada número:** Cria um objeto Fatorial para cada número válido.
+**Calcular último dígito (Fatorial.calcularUltimoDigito):** Chama o método calcularUltimoDigito da classe Fatorial para calcular o último dígito do fatorial de cada número.
+**Imprimir resultado:** Imprime os últimos dígitos calculados.
+**Fechar Scanner:** Fecha o objeto Scanner.
+**End:** Fim do programa.
+
+2. **Classe Fatorial:**
+**Construtor Fatorial(numero):** Inicializa o objeto Fatorial com o número fornecido.
+**calcularUltimoDigito():** Calcula o último dígito do fatorial do número.
+- **numero < 0:** Se o número for negativo, lança uma exceção IllegalArgumentException.
+- **numero <= 1:** Se o número for 0 ou 1, retorna 1 (o último dígito do fatorial de 0 e 1 é 1).
+**LoopCalculo:** Caso contrário, entra em um loop para calcular o fatorial e extrair o último dígito.
+- **ultimoDigito = 1:** Inicializa a variável ultimoDigito com 1.
+- **for i = 2; i <= numero; i++:** Itera de 2 até o número fornecido.
+- **(ultimoDigito * i) % 10:** Calcula o último dígito do produto atual e armazena em ultimoDigito.
+- **return ultimoDigito:** Retorna o último dígito calculado.
 
 ## Resultados da Execução
 
