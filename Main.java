@@ -6,17 +6,38 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Digite o número para calcular o último dígito do fatorial: ");
-        int N = scanner.nextInt();
+        System.out.print("Digite até 10 números separados por espaço: ");
+        String input = scanner.nextLine();
+        String[] numerosStr = input.split(" ");
 
-        Fatorial fatorial = new Fatorial(N);
-        int ultimoDigito = fatorial.calcularUltimoDigito();
-
-        System.out.println("O último dígito do fatorial de " + N + " é: " + ultimoDigito);
+        if (numerosStr.length > 10) {
+            System.err.println("Erro: Você digitou mais de 10 números. Por favor, digite no máximo 10.");
+            return;
+        }
 
         try (FileWriter writer = new FileWriter("README.md", true)) {
             writer.write("\n## Resultado da Execução\n\n");
-            writer.write("O último dígito do fatorial de " + N + " é: " + ultimoDigito + "\n");
+
+            for (String numStr : numerosStr) {
+                try {
+                    int numero = Integer.parseInt(numStr);
+                    if (numero < 0) {
+                        throw new IllegalArgumentException("Números devem ser não negativos.");
+                    }
+                    Fatorial fatorial = new Fatorial(numero);
+                    int ultimoDigito = fatorial.calcularUltimoDigito();
+                    System.out.print(ultimoDigito + " ");
+                    writer.write(ultimoDigito + " ");
+                } catch (NumberFormatException e) {
+                    System.err.println("Entrada inválida: '" + numStr + "' não é um número válido.");
+                } catch (IllegalArgumentException e) {
+                    System.err.println(e.getMessage());
+                }
+            }
+
+            System.out.println();
+            writer.write("\n");
+
         } catch (IOException e) {
             System.err.println("Erro ao escrever no arquivo README.md: " + e.getMessage());
         }
