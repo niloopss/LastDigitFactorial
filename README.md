@@ -2,7 +2,9 @@
 
 ## Descrição
 
-LatsDigitFactorial é um código que calcula e exibe o último dígito do fatorial de até 10 números inteiros não negativos fornecidos pelo usuário.
+LatsDigitFactorial é um código que calcula e exibe o último dígito do fatorial de até 10 números inteiros não negativos fornecidos pelo usuário. O código-fonte deste projeto foi totalmente documentado utilizando JavaDocs, facilitando a compreensão e manutenção do sistema.
+
+
 
 ## Uso
 

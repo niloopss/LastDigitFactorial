@@ -2,7 +2,15 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Classe principal para calcular e exibir os últimos dígitos dos fatoriais de até 10 números inteiros não negativos.
+ * Os resultados são exibidos no console e também adicionados ao final do arquivo README.md.
+ * @author Nivea Lins
+ */
 public class Main {
+    /**
+     * Método principal que executa o programa.
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
