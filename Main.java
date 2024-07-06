@@ -14,8 +14,7 @@ public class Main {
 
         System.out.println("O último dígito do fatorial de " + N + " é: " + ultimoDigito);
 
-        // Gravando o resultado no README.md
-        try (FileWriter writer = new FileWriter("README.md", true)) { // true para append
+        try (FileWriter writer = new FileWriter("README.md", true)) {
             writer.write("\n## Resultado da Execução\n\n");
             writer.write("O último dígito do fatorial de " + N + " é: " + ultimoDigito + "\n");
         } catch (IOException e) {

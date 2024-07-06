@@ -1,12 +1,20 @@
+# Atividade 1 - tarefa II
 
-## Resultado da Execução
+## Descrição
 
-O último dígito do fatorial de 3 é: 6
+LatsDigitFactorial é um código que calcula o último dígito do fatorial de um número.
 
-## Resultado da Execução
+## Uso
 
-O último dígito do fatorial de 1 é: 1
+Execute o programa e insira o número desejado quando solicitado. O resultado será exibido no console e também neste arquivo.
 
-## Resultado da Execução
+## Resultados da Execução
 
-O último dígito do fatorial de 2 é: 2
+A tabela abaixo mostra o último dígito do fatorial de cada número testado:
+
+| Número | Último Dígito do Fatorial |
+|--------|---------------------------|
+|    3   |            6              |
+|    1   |            1              |
+|    2   |            2              |
+|    5   |            0              |

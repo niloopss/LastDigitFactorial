@@ -18,3 +18,7 @@ A tabela abaixo mostra o último dígito do fatorial de cada número testado:
 |    1   |            1              |
 |    2   |            2              |
 |    5   |            0              |
+
+## Resultado da Execução
+
+O último dígito do fatorial de 5 é: 0
